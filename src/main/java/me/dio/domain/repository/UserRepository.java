@@ -18,4 +18,6 @@ import org.springframework.stereotype.Repository;
 @Repository // Indica que esta interface é um componente de acesso a dados, permitindo a injeção de dependência pelo Spring
 public interface UserRepository extends JpaRepository<User, Long> {
     // Métodos adicionais de consulta podem ser definidos aqui, se necessário.
+
+    boolean existsByAccountNumber(String accountNumber);
 }
